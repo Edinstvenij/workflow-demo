@@ -1,0 +1,11 @@
+name: testing react app
+on: push
+jobs:
+  testing:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Dependency Injection
+        run: npm ci
+      - name: Run testing
+        run: npm run test
